@@ -1,16 +1,16 @@
-name: "Chromatic"
+# name: "Chromatic"
 
-on: push
+# on: push
 
-jobs:
-  chromatic:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: install
-      run: |
-        yarn && git status --porcelain
-    - name: run chromatic
-      run: yarn chromatic
-      env: 
-        CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
+# jobs:
+#   chromatic:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: install
+#       run: |
+#         yarn && git status --porcelain
+#     - name: run chromatic
+#       run: yarn chromatic
+#       env: 
+#         CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
