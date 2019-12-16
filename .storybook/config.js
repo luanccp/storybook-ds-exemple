@@ -9,3 +9,13 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+
+// para exportar como app estatico, ir no package.json
+/*
+{
+  "scripts": {
+    "build-storybook": "build-storybook -c .storybook"
+  }
+}
+*/
