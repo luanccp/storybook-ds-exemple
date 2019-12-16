@@ -1,14 +1,14 @@
-name: CI
+name: "Chromatic"
 
-on: [push]
+on: push
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
     - uses: chromaui/action@v1
-      with:
-        token: $
+      with: 
         appCode: i67m81xuk4p
+        token: ${{ secrets.GITHUB_TOKEN }}
