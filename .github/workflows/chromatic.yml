@@ -13,8 +13,3 @@ jobs:
       with: 
         appCode: ${{ secrets.CHROMATIC_APP_CODE }}
         token: ${{ secrets.GITHUB_TOKEN }}
-    - name: tests
-      - run: |
-          npm lint # lint your code
-          npm test # run your unit tests
-          npm run chromatic # run your visual tests
