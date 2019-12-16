@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: chromaui/action@v1
+      with:
+        token: $
+        appCode: i67m81xuk4p
