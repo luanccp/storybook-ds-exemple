@@ -9,8 +9,14 @@ jobs:
     - name: install
       run: |
         yarn && git status --porcelain
-        yarn chromatic
     - uses: chromaui/action@v1
       with: 
         appCode: ${{ secrets.CHROMATIC_APP_CODE }}
         token: ${{ secrets.GITHUB_TOKEN }}
+    - name: tests
+      - run:
+          command: npm lint # lint your code
+      - run:
+          command: npm test # run your unit tests
+      - run:
+          command: npm run chromatic # run your visual tests
