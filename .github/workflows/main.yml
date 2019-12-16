@@ -3,12 +3,11 @@ name: "Chromatic"
 on: push
 
 jobs:
-  test:
+  chromatic:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - uses: chromaui/action@v1
       with: 
-        appCode: i67m81xuk4p
+        appCode: ${{ secrets.CHROMATIC_APP_CODE }}
         token: ${{ secrets.GITHUB_TOKEN }}
