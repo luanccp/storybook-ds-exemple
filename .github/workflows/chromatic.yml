@@ -9,6 +9,7 @@ jobs:
     - name: install
       run: |
         yarn && git status --porcelain
+        yarn chromatic
     - uses: chromaui/action@v1
       with: 
         appCode: ${{ secrets.CHROMATIC_APP_CODE }}
